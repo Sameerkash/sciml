@@ -1,0 +1,7 @@
+name = "basics"
+uuid = "b9f0b2e0-e926-41bf-b7db-bb884dae71b4"
+authors = ["Sameer Kashyap <sameera.s.kashyap@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
