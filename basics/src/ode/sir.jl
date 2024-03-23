@@ -33,7 +33,23 @@ problem = ODEProblem(sirModel!, u0, tspan, p)
 sol = solve(problem)
 
 using Plots
-plots = []
-@gif for (i, x) in enumerate(range(tspan[1], tspan[2], length=160))
-    push!(plots, sol[1], sol[2], sol[3])
+# Generate the animation
+frame_duration = 0.5  # Duration for each frame in seconds
+frames_per_step = 5  # Number of frames per time step
+total_frames = length(sol.t) * frames_per_step
+
+@gif for t_step in 1:length(sol.t)
+    t = sol.t[t_step]
+    infected_population = sol(t)[1]  # Extract infected population at time t
+
+    # Plot frames_per_step frames for each time step
+    for frame in 1:frames_per_step
+        plot(sol.t[1:t_step], [sol(t)[1] for t in sol.t[1:t_step]], xlabel="Time", ylabel="Infected Population", title="Infected Population over Time", legend=false)
+
+        frame == frames_per_step && sleep(frame_duration)  # Pause at the last frame of each time step
+    end
 end
+
+# Save the animation as a gif
+gif("Infected_Population_Animation.gif")
+
