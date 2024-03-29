@@ -46,6 +46,25 @@ For predicting suspetible, recovered and infected population in a pandemic
 ```
 i∂ψ(t, x)/∂t =∂^2ψ(t, x)/∂x^2 + V (x)ψ(t, x)
 ```
+
 **Output**:
 
 ![Schrodinger](./outputs/Schrodinger.gif),
+
+## Neural ODEs
+
+### SIR Model
+
+Solving the SIR model using a Neural Ordinary differential equation to predict infected, susceptible and recoevered population in a sample size of 1000
+
+**Equations**
+
+```
+dS(t)/dt = −βS(t)I(t)/N
+
+dI(t)/dt = βS(t)I(t)/N − γI(t)
+
+dR(t)/dt = γI(t),
+```
+
+![NEURAL_ODE](./outputs/SIR_NEURAL_ODE.png),
