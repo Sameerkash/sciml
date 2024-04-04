@@ -68,3 +68,21 @@ dR(t)/dt = γI(t),
 ```
 
 ![NEURAL_ODE](./outputs/SIR_NEURAL_ODE.png),
+
+## Neural PDE
+
+### 1 Dimensional Wave equation
+
+**Equations**
+
+```
+∂^2u(x, t)/∂t^2 = c^2 ∂^2u(x, t)/∂x^2
+
+u(0, t) = u(1, t) = 0 for all t > 0
+
+(2) u(x, 0) = x(1 − x) for all 0 < x < 1
+
+(3) ∂u(x, 0) ∂t = 0 for all 0 < x < 1
+```
+
+![1D](./outputs/1d_wave_equation.png),
