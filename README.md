@@ -1,5 +1,7 @@
 # Scientific Machine learning Using Julia
 
+This repoitory showcases the solution to Ordinary and Partial Differential Equations.
+
 ## Ordinary Differential Equations
 
 ### Oscilation of a pendulum
