@@ -86,3 +86,17 @@ u(0, t) = u(1, t) = 0 for all t > 0
 ```
 
 ![1D](./outputs/1d_wave_equation.png),
+
+## Universal Differential Equations
+
+### Lotka Voltera Predator Prey model
+
+**Equations**
+
+```
+dx/dt = αx − βxy,
+dy/dt = −δy + γxy
+
+```
+
+![1D](./outputs/lotka_voltera.png),
